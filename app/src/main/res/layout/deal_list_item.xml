@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="deal"
+            type="me.abhishek.targetdeals.model.Deal" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/iv_deal_item"
+            imageUrl="@{deal.image}"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_margin="16dp"
+            android:background="@android:color/black"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_deal_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{deal.title}"
+            android:textColor="@android:color/black"
+            app:layout_constraintRight_toRightOf="parent"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toRightOf="@id/iv_deal_item"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/small_text" />
+
+        <ImageView
+            android:id="@+id/iv_divider"
+            android:layout_width="0dp"
+            android:layout_height="0.75dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:src="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/iv_deal_item"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_deal_title"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_item_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@{deal.salePrice != null ? deal.salePrice : deal.price}"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            app:layout_constraintLeft_toRightOf="@id/iv_deal_item"
+            app:layout_constraintTop_toBottomOf="@+id/iv_divider"
+            tools:text="@string/dummy_price" />
+
+        <TextView
+            android:id="@+id/tv_aisle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/circle"
+            android:gravity="center"
+            android:text="@{deal.aisle}"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="18sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_divider"
+            tools:text="@string/dummy_aisle" />
+
+        <TextView
+            android:id="@+id/tv_or"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/or"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp"
+            app:layout_constraintRight_toLeftOf="@id/tv_aisle"
+            app:layout_constraintTop_toTopOf="@id/tv_aisle" />
+
+        <TextView
+            android:id="@+id/tv_ship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:text="@string/ship"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            app:layout_constraintRight_toLeftOf="@id/tv_or"
+            app:layout_constraintTop_toTopOf="@id/tv_aisle" />
+    </android.support.constraint.ConstraintLayout>
+</layout>

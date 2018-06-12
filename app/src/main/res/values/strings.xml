@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Target Deals</string>
+    <string name="add_to_list">add to list</string>
+    <string name="add_to_cart">add to cart</string>
+    <string name="ship">ship</string>
+    <string name="or">or</string>
+    <string name="long_text">Useless extra long text to test the UI. I must delete this when I am
+        done testing. I want to break free. I want to break free. I want to break free from your lies
+    youre so self satisfied I dont need you. Ive got to break free. God knows. God knows I want to break free.</string>
+    <string name="small_text">Random small text.</string>
+    <string name="dummy_price">$8.98</string>
+    <string name="dummy_price_2">Reg: $8.98</string>
+    <string name="dummy_aisle">B2</string>
+    <string name="mrp_format">Reg: %s</string>
+    <string name="no_internet">Check your internet connection</string>
+    <string name="error">Error fetching deals</string>
+    <string name="retry">Retry</string>
+</resources>
